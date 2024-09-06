@@ -13,6 +13,6 @@ router
     .get("/", getUsers)
     .post("/", upload.single("image"), addUsers)
     .delete("/:id", deleteUsers)
-    .patch("/:id", patchUsers)
+    .patch("/:id", upload.single("image"), patchUsers);
 
 export default router;
